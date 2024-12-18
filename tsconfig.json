@@ -1,15 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "module": "commonjs",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
     "strict": true,
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "types": ["vitest/globals"] // Add Vitest types here
   },
-  "include": [
-    "src",
-    "node_modules/vitest/globals.d.ts"
-  ]
+  "include": ["src", "test", "vendor/excel.d.ts"], // Including source and test files
+  "exclude": ["node_modules"]
 }
